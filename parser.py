@@ -6,7 +6,7 @@ csv_data = ["Id,Address,Longitude,Latitude\n"]
 # from ETRS-GK25 (EPSG:3879) offered by HSY data, to EPSG:4326 also known as WGS84 which is accepted by Google Maps
 coord_transformer = Transformer.from_crs("epsg:3879", "epsg:4326", always_xy=True)
 
-with shapefile.Reader("HSY_Vesipostit_shp/HSY_Vesipostit", encoding="latin") as sf:
+with shapefile.Reader("data/HSY_Vesipostit", encoding="latin") as sf:
     assert sf.shapeType == shapefile.POINT
     shapeRecs = sf.shapeRecords()
     # print(shapeRecs[0].shape.points)
@@ -20,7 +20,7 @@ with shapefile.Reader("HSY_Vesipostit_shp/HSY_Vesipostit", encoding="latin") as 
         line = f"{id},{address},{lat},{lon}\n"
         csv_data.append(line)
 
-print(csv_data)
+# print(csv_data)
 
 with open("output.csv", "w") as f:
     f.writelines(csv_data)
