@@ -1,6 +1,6 @@
 # hsy-public-water-posts-csv
 
-This project takes public water post data from HSY Open data in ESRI Shape format, and outputs a CSV-file with `Id,Address,Latitude,Longitude` data, which can be e.g. imported into a Google Maps My Map.
+This project takes [public water post data](https://hri.fi/data/dataset/paakaupunkiseudun-vesipostit) from HSY Open data in ESRI Shape format, and outputs a CSV-file with `Id,Address,Latitude,Longitude` data, which can be e.g. imported into a Google Maps My Map.
 
 ## Installation and use
 
